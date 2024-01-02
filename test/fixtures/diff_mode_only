@@ -46,11 +46,11 @@ index d873924860bf4da06ac93db5c6a188f63dd1c3cc..57da75f05e28e8a256922bf345ccd390
 +  def self.run
 +    if Merb::Config[:init_file]
 +      require Merb.root / Merb::Config[:init_file]
-+    elsif File.exists?(Merb.root / "config" / "merb_init.rb")
++    elsif File.exist?(Merb.root / "config" / "merb_init.rb")
 +      require Merb.root / "config" / "merb_init"
-+    elsif File.exists?(Merb.root / "merb_init.rb")
++    elsif File.exist?(Merb.root / "merb_init.rb")
 +      require Merb.root / "merb_init"
-+    elsif File.exists?(Merb.root / "application.rb")
++    elsif File.exist?(Merb.root / "application.rb")
 +      require Merb.root / "application"
 +    end
 +  end

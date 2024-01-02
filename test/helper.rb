@@ -13,7 +13,7 @@ require 'pry'
 REPOS_PATH = File.expand_path(File.join(File.dirname(__FILE__), '..', 'repos'))
 GRIT_REPO = ENV["GRIT_REPO"] || File.join(REPOS_PATH, 'grit')
 
-if File.exists?(GRIT_REPO)
+if File.exist?(GRIT_REPO)
   puts "Using repo from #{GRIT_REPO}"
 else
   puts 'Unpacking repo for tests...'
